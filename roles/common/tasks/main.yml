@@ -1,0 +1,17 @@
+---
+- name: Update apt-get package manager repositories cache
+  apt:
+    update_cache: yes
+
+- name: Upgrade installed packages
+  apt:
+    upgrade: safe
+
+- name: Install common packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - vim
+    - python
+    - python-pip

@@ -1,0 +1,6 @@
+---
+- name: Install docker
+  shell: curl -fsSL get.docker.com -o get-docker.sh | sh get-docker.sh
+
+- name: Install docker-compose
+  shell: pip install docker-compose

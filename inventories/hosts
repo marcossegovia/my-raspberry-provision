@@ -1,0 +1,6 @@
+[raspberry]
+192.168.1.128
+
+[raspberry:vars]
+router=192.168.1.1
+ansible_ssh_user=pi

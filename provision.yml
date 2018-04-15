@@ -1,0 +1,8 @@
+---
+- hosts: raspberry
+  become: yes
+  roles:
+    - common
+    - network
+    - { role: geerlingguy.git }
+    - docker

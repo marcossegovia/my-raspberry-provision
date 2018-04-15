@@ -1,0 +1,10 @@
+---
+- name: Set network configuration
+  template:
+      src: dhcpcd.conf
+      dest: /etc/dhcpcd.conf
+      owner: root
+      group: netdev
+      mode: '0600'
+  notify: Restart dhcpcd
+
